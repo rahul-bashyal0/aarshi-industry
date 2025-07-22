@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="./image/logo.png" type="image/png">
+    <link rel="icon" href="/image/logo.png" type="image/png">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -105,7 +105,7 @@
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <a href="#home" class="flex items-center space-x-2">
-                    <img src="./image/logo.png" alt="AIPL Logo" class="h-16 w-16 object-contain">
+                    <img src="/image/logo.png" alt="AIPL Logo" class="h-16 w-16 object-contain">
                     <span class="text-xl font-bold tracking-tight text-gray-900">
                         Aarshi Industries<span class="block text-xs font-medium text-gray-600">Pvt. Ltd.</span>
                     </span>
@@ -183,7 +183,7 @@
         
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img src="./image/1.jpeg" alt="Aarshi Industries Manufacturing Facility" class="w-full h-auto object-cover">
+                <img src="/image/1.jpeg" alt="Aarshi Industries Manufacturing Facility" class="w-full h-auto object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
                   <h3 class="text-white text-2xl font-bold">Our State-of-the-Art Facility</h3>
                 </div>
@@ -324,7 +324,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-2">
-                        <img src="./image/logo.png" alt="AIPL Logo" class="h-12 w-12">
+                        <img src="/image/logo.png" alt="AIPL Logo" class="h-12 w-12">
                         <span class="text-xl font-bold text-white">Aarshi Industries Pvt. Ltd.</span>
                     </div>
                     <p class="mt-4 text-sm">Pioneering sustainable solutions across Asia since 2010. Committed to environmental responsibility and industrial excellence.</p>
@@ -375,25 +375,25 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const products = [
         {
-            img: "./image/Battery-Recycling-Lead.webp",
+            img: "/image/Battery-Recycling-Lead.webp",
             title: "Battery Recycling",
             desc: "Transforming used batteries into high-grade reusable lead materials.",
             features: ["Safe & Eco-Friendly Process", "Responsible Waste Management"]
         },
         {
-            img: "./image/Aluminium-Recycling.webp",
+            img: "/image/Aluminium-Recycling.webp",
             title: "Remelted Lead (RML)",
             desc: "Our base product, refined from recycled scrap to exceptional purity.",
             features: ["99.97% Guaranteed Purity", "Exceeds Industry Standards"]
         },
         {
-            img: "./image/3.jpeg",
+            img: "/image/3.jpeg",
             title: "Lead Ingots & Alloys",
             desc: "Precision-cast pure lead and custom alloys for specialized applications.",
             features: ["Uniform Weight & Purity", "Custom Alloy Compositions"]
         },
         {
-            img: "./image/plastic-granules-mobile.webp",
+            img: "/image/plastic-granules-mobile.webp",
             title: "Lead Oxides",
             desc: "High-grade Red and Grey Lead Oxides for battery manufacturing and more.",
             features: ["High-Purity Grey Lead Oxide", "Premium Red Lead Oxide"]
@@ -401,16 +401,16 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     const galleryImages = [
-        { src: "./image/1.jpeg", title: "Battery Recycling Yard" },
-        { src: "./image/3.jpeg", title: "Stacked Lead Ingots" },
-        { src: "./image/4.jpeg", title: "Industrial Furnace" },
-        { src: "./image/2.jpeg", title: "Plastic Granules" },
-        { src: "./image/6.jpeg", title: "Refining Machinery" },
-        { src: "./image/5.jpeg", title: "Factory Operations" },
-        { src: "./image/8.jpeg", title: "Metal Processing" },
-        { src: "./image/7.jpg", title: "Raw Lead Materials" },
-        { src: "./image/11.jpeg", title: "Final Product Shipment" },
-        { src: "./image/9.jpeg", title: "Quality Inspection" }
+        { src: "/image/1.jpeg", title: "Battery Recycling Yard" },
+        { src: "/image/3.jpeg", title: "Stacked Lead Ingots" },
+        { src: "/image/4.jpeg", title: "Industrial Furnace" },
+        { src: "/image/2.jpeg", title: "Plastic Granules" },
+        { src: "/image/6.jpeg", title: "Refining Machinery" },
+        { src: "/image/5.jpeg", title: "Factory Operations" },
+        { src: "/image/8.jpeg", title: "Metal Processing" },
+        { src: "/image/7.jpg", title: "Raw Lead Materials" },
+        { src: "/image/11.jpeg", title: "Final Product Shipment" },
+        { src: "/image/9.jpeg", title: "Quality Inspection" }
     ];
 
     /*
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Set the initial text before initializing Swiper.
-    updateProductText(products[0]);
+    updateProductText(allSlidesData[0]);
     
     // Initialize Swiper.
     const swiper = new Swiper(".mySwiper", {
@@ -472,7 +472,7 @@ document.addEventListener('DOMContentLoaded', function () {
         productTextContent.classList.add('opacity-0');
 
         setTimeout(() => {
-            const activeProduct = products[swiper.realIndex];
+            const activeProduct = allSlidesData[swiper.realIndex];
             if (activeProduct) {
                 updateProductText(activeProduct);
                 productTextContent.classList.remove('opacity-0');
@@ -593,7 +593,6 @@ document.addEventListener('DOMContentLoaded', function () {
         navbar.classList.toggle('navbar-scrolled', window.scrollY > 20);
     });
 
-    // All original modal functionality is preserved in the HTML and can be added here if needed.
 });
 </script>
 </body>
