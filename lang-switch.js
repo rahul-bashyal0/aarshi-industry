@@ -50,6 +50,22 @@ function applyTranslations(dict) {
       if (el) el.textContent = dict[id];
     }
   });
+
+  // Add support for mobile nav IDs in language switching
+  // Desktop nav
+  ['nav-home','nav-about','nav-products','nav-gallery','nav-contact','open-modal-btn-desktop'].forEach(id => {
+    if (dict[id]) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = dict[id];
+    }
+  });
+  // Mobile nav
+  ['nav-home-mobile','nav-about-mobile','nav-products-mobile','nav-gallery-mobile','nav-contact-mobile','open-modal-btn-mobile'].forEach(id => {
+    if (dict[id]) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = dict[id];
+    }
+  });
 }
 
 // Listen for both desktop and mobile language selector changes
